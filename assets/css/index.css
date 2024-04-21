@@ -1,0 +1,34 @@
+/* Réinitialisation des marges et des paddings*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.home {
+  height: 100vh;
+  background-image: url("./img/background376px.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+@media screen and (min-width: 576px) {
+  .home {
+    background-image: url("./img/background576px.svg");
+  }
+}
+@media screen and (min-width: 992px) {
+  .home {
+    background-image: url("./img/Background\ 992px.svg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home {
+    background-image: url("./img/Background\ \(2\).svg");
+  }
+}
