@@ -6,6 +6,7 @@
   font-family: Inter, Helvetica, sans-serif
 }
 
+/* Background image */
 .header {
   height: 100vh;
   background-image: url("./img/background376px.svg");
@@ -13,6 +14,8 @@
   background-size: cover;
   background-position: top;
 }
+
+/*Navbar  */
 .navbar {
   height: 60px;
   background-color: white;
@@ -38,6 +41,25 @@
 }
 .btn-black {
   width: 120px;
+}
+.container-faUser {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: black;
+}
+.container-searchBar{
+  height: 50px;
+  border-radius: 5px;
+}
+.search_input {
+  border: none;
+}
+.container-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: black;
 }
 @media screen and (min-width: 576px) {
   .header {

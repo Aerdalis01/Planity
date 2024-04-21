@@ -11,12 +11,13 @@
 </head>
 
 <body>
-  <!--Début Header-->
   <header id="home" class="header">
+    <!--Début Header-->
     <nav class="navbar navbar-expand-lg">
+      <!--Début Navbar-->
       <div class="container-fluid p-0 m-0">
         <div class="row col-12 align-items-center flex-nowrap m-0 w-100">
-          <div class="container-faBurger col-3 col-md-1 ps-3">
+          <div class="container-faBurger col-2 col-md-1 ps-3">
             <i class="fa-solid fa-bars fa-xl"></i>
           </div>
           <div class="container-navbar col-lg-5 order-1">
@@ -35,26 +36,43 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md-2 col-lg-2 order-0 text-center">
+          <div class="col-8 col-md-2 col-lg-2 order-0 text-center">
             <a class="navbar-brand logo col" href="#home">
               <img src="./assets/css/img/logo.svg" alt="logo Planity">
             </a>
           </div>
-
           <div class="container-btn text-end  col-md-9 col-lg-5 order-2">
             <a class="btn btn-nav me-3 " href="#" role="button">Ajoutez votre établissement</a>
             <a class="btn btn-black btn-dark  mx-1" href="#" role="button">Se connecter</a>
           </div>
-          <div class="container-faUser col-3 text-end pe-3">
-            <i class="fa-regular fa-user fa-xl"></i>
+          <div class="container-faUser col-2  d-flex justify-content-center align-items-center ">
+            <i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i>
           </div>
         </div>
       </div>
     </nav>
-    <section class="seach-bar">
-
-
+    <!--Fin navbar-->
+    <!--Début section search-bar-->
+    <section class="search-bar d-flex text-center align-items-center justify-content-center h-100">
+      <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-light">Réservez en beauté</h1>
+            <p class="text-light">Simple • Immédiat • 24/24</p>
+          <div class=" d-flex justify-content-center w-100 ">
+            <div class="container-searchBar d-flex align-items-center justify-content-center bg-light w-75">
+              <div class="searchbar row justify-content-between m-0 px-2 w-100 ">
+                <input class="search_input col-9" type="text" name="" placeholder="Nom du salon, prestations (coupes)">
+                <div class="container-icon d-flex align-items-center justify-content-center col-1">
+                <a href="#" class="search_icon"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 mt-3">
+          <button type="button" class="btn  btn-dark btn-lg w-75">Ajoutez votre établissement</button>
+        </div>
     </section>
+    <!--Fin section search bar-->
   </header>
   <!--Fin header-->
 
