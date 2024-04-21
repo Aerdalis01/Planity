@@ -3,32 +3,87 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  font-family: Inter, Helvetica, sans-serif
 }
 
-.logo img {
-  width: 80px;
-}
-
-.home {
+.header {
   height: 100vh;
   background-image: url("./img/background376px.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: top;
+}
+.navbar {
+  height: 60px;
+  background-color: white;
+}
+.container-navbar {
+  display: none;
 }
 
+.logo img {
+  width: 140px;
+  height: 19px;
+}
+
+.container-btn{
+  display: none;
+}
+.fa-regular {
+  width: 60px;
+}
+.btn-nav {
+  width: 230px;
+  background-color: rgb(232, 232, 232);
+}
+.btn-black {
+  width: 120px;
+}
 @media screen and (min-width: 576px) {
-  .home {
+  .header {
     background-image: url("./img/background576px.svg");
+    background-size: cover;
+  background-position: top;
   }
 }
+
+@media screen and (min-width: 767px) {
+  .container-btn {
+    display: block;
+  }
+.container-faUser {
+  display: none;
+}
+}
+
 @media screen and (min-width: 992px) {
-  .home {
+  .header {
     background-image: url("./img/Background\ 992px.svg");
+    background-size: cover;
+    background-position: top;
+  }
+  .navbar {
+    background-color: transparent;
+  }
+  .navbar-nav a {
+    color: white;
+  }
+  .logo {
+    filter: brightness(0) invert(1);
+  }
+  .container-faBurger {
+    display: none;
+  }
+  .container-navbar {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
-  .home {
+  .header {
     background-image: url("./img/Background\ \(2\).svg");
   }
+  header {
+    padding: 0 100px 0 100px ;
+  }
+
 }
