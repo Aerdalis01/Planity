@@ -2,3 +2,4 @@
 const iconeUser = document.querySelector('.link-user');
 console.log(iconeUser);
 
+iconeUser.addEventListener()

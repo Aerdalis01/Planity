@@ -45,19 +45,21 @@
             <a class="btn btn-nav me-3 " href="#" role="button">Ajoutez votre établissement</a>
             <a class="btn btn-black btn-dark  mx-1" href="#" role="button">Se connecter</a>
           </div>
-          <a href="#" class="link-user d-flex justify-content-center align-items-center"> <i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i></a>
+          <a href="#" class="link-user d-flex justify-content-center align-items-center"> <i
+              class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i></a>
         </div>
       </div>
     </nav>
     <!--Fin navbar-->
     <!--Début section search-bar-->
-    <section class="search-bar d-flex text-center align-items-center justify-content-center h-100">
-      <div class="container-fluid">
+    <div class="h-25"></div>
+    <section class="search-bar d-flex text-center h-50">
+      <div class="search-bar-container container-fluid">
         <div class="row">
             <h1 class="text-light">Réservez en beauté</h1>
             <p class="text-light">Simple • Immédiat • 24/24</p>
           <div class=" d-flex justify-content-center w-100 ">
-            <div class="container-searchBar d-flex align-items-center justify-content-center bg-light w-75">
+            <div class="search-bar--content d-flex align-items-center justify-content-center bg-light w-75">
               <div class="searchbar row justify-content-between m-0 px-2 w-100 ">
                 <input class="search-input col-9" type="text" name="" placeholder="Nom du salon, prestations (coupes)">
                 <div class="container-icon d-flex align-items-center justify-content-center col-1">
@@ -69,6 +71,23 @@
           <div class="w-100 mt-3">
           <button type="button" class="btn btn-search btn-dark btn-lg w-75">Ajoutez votre établissement</button>
         </div>
+          <!-- formulaire-->
+          <form class="form-searchbar">
+            <div class="row d-flex justify-content-center align-items-center p-0 m-0">
+              <div class="container-label col-9 pt-2 pb-2 d-flex align-items-center justify-content-center">
+                <label class="col-9 col-xl-5 ps-5">
+                <span class="d-flex align-self-start ">Que recherchez-vous ?</span>
+                <input type="text" class="form-control fw-semibold p-0" placeholder="Nom du salon, prestations (coupe...)">
+              </label>
+              <div class="separator mx-5"></div>
+                <label class="col-3  label-separator">
+                  <span class="d-flex align-self-start">Où</span>
+                  <input type="text" class="form-control fw-semibold p-0" placeholder="Adresse, ville...">
+                </label>
+                <button type="button" class="btn btn-dark  col-2">Rechercher</button>
+              </div>
+            </div>
+          </form>
     </section>
     <!--Fin section search bar-->
   </header>
