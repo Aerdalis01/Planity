@@ -3,9 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  font-family: Inter, Helvetica, sans-serif
+  font-family: Inter, Helvetica, sans-serif;
 }
 
+hr {
+  width: 45px;
+}
 /* Background image */
 .header {
   height: 100vh;
@@ -32,7 +35,7 @@
   height: 19px;
 }
 
-.container-btn{
+.container-btn {
   display: none;
 }
 .link-user {
@@ -52,7 +55,7 @@
   width: 120px;
 }
 /*Début search bar */
-.search-bar--content{
+.search-bar--content {
   height: 50px;
   border-radius: 10px;
 }
@@ -89,10 +92,49 @@
   height: 25px;
   border: 1px solid black;
   opacity: 15%;
-  
+
   .form-searchbar {
     height: 100px;
   }
+}
+/*Carousel*/
+.carousel {
+  height: 100vh;
+  padding: 50px 0 50px 0;
+}
+
+.carousel-content {
+  overflow: hidden;
+  width: 750px;
+}
+
+.carousel-content.carousel-1:nth-child(1) {
+  position: absolute;
+  top: 0;
+}
+.carousel-content.carousel-2:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+
+}
+.carousel-content.carousel-3:nth-child(3) {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-item {
+  width: 240px;
+}
+
+.carousel-text {
+  display: none;
+}
+
+.text-1,
+.text-2,
+.text-3,
+.text-4 {
+  display: none;
 }
 @media screen and (min-width: 576px) {
   .header {
@@ -105,32 +147,38 @@
   .form-searchbar {
     display: none;
   }
+  /* .carousel-content.carousel-3:nth-child(1) {
+    right: 282px;
+}
+  .carousel-content.carousel-1:nth-child(2) {
+    right: 282px;
+} */
 }
 @media screen and (min-width: 767px) {
   .container-btn {
     display: block;
   }
-.link-user {
-  visibility: hidden;
-  position: absolute;
-}
-.search-bar-container {
-  display: flex;
-  align-items: center;
-}
-.btn-search {
-  display: none;
-}
-.search-bar--content {
-  visibility: hidden;
-  position: absolute;
-}
-.separator {
-  display: none;
-}
-.label-separator {
-  display: none;
-}
+  .link-user {
+    visibility: hidden;
+    position: absolute;
+  }
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+  }
+  .btn-search {
+    display: none;
+  }
+  .search-bar--content {
+    visibility: hidden;
+    position: absolute;
+  }
+  .separator {
+    display: none;
+  }
+  .label-separator {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -160,7 +208,7 @@
     background-image: url("./img/Background\ \(2\).svg");
   }
   header {
-    padding: 0 100px 0 100px ;
+    padding: 0 100px 0 100px;
   }
   .search-bar-container {
     display: flex;
@@ -172,5 +220,4 @@
   .label-separator {
     display: block;
   }
-  
 }
