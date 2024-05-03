@@ -23,9 +23,6 @@ hr {
   height: 60px;
   background-color: white;
 }
-.container-nav {
-  width: 100%;
-}
 .container-navbar {
   display: none;
 }
@@ -55,13 +52,13 @@ hr {
   width: 120px;
 }
 /*Début search bar */
-.search-bar--content {
-  height: 50px;
-  border-radius: 10px;
-}
 .search-bar-container {
   display: flex;
   align-items: end;
+}
+.search-bar--content {
+  height: 50px;
+  border-radius: 10px;
 }
 .search-input {
   border: none;
@@ -74,9 +71,6 @@ hr {
 }
 
 /*Formulaire search bar */
-.form-search {
-  background-color: white;
-}
 .container-label {
   height: auto;
   border-radius: 10px;
@@ -99,7 +93,7 @@ hr {
 }
 /*Carousel*/
 .carousel {
-  height: 100vh;
+  height: 75vh;
   padding: 50px 0 50px 0;
 }
 
@@ -107,12 +101,15 @@ hr {
   overflow: hidden;
   width: 750px;
 }
+/* .carousel {
+  padding: 0 40px 0 40px;
+} */
 
-.carousel-content.carousel-1:nth-child(1) {
+.carousel-content.carousel-1:nth-child(0) {
   position: absolute;
   top: 0;
 }
-.carousel-content.carousel-2:nth-child(2) {
+.carousel-content.carousel-2:nth-child(1) {
   position: relative;
   overflow: hidden;
 
@@ -136,6 +133,10 @@ hr {
 .text-4 {
   display: none;
 }
+.circle-chevron {
+  width: 24px;
+}
+
 @media screen and (min-width: 576px) {
   .header {
     background-image: url("./img/background576px.svg");
@@ -147,12 +148,7 @@ hr {
   .form-searchbar {
     display: none;
   }
-  /* .carousel-content.carousel-3:nth-child(1) {
-    right: 282px;
-}
-  .carousel-content.carousel-1:nth-child(2) {
-    right: 282px;
-} */
+  
 }
 @media screen and (min-width: 767px) {
   .container-btn {
@@ -179,8 +175,10 @@ hr {
   .label-separator {
     display: none;
   }
+  .carousel-item {
+    width: 324px;
+  }
 }
-
 @media screen and (min-width: 992px) {
   .header {
     background-image: url("./img/Background\ 992px.svg");
@@ -202,6 +200,16 @@ hr {
   .container-navbar {
     display: block;
   }
+  .carousel-text--sm {
+    display: none;
+  }
+  .carousel-text {
+    display: block;
+  }
+  .carousel-item {
+    width: 475px;
+    
+  }
 }
 @media screen and (min-width: 1200px) {
   .header {
@@ -220,4 +228,7 @@ hr {
   .label-separator {
     display: block;
   }
+  .carousel-item {
+    width: 550px;
+}
 }
