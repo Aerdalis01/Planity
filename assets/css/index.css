@@ -2,16 +2,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
   font-family: Inter, Helvetica, sans-serif;
 }
-
 hr {
   width: 45px;
 }
 /* Background image */
 .header {
-  height: 100vh;
+  height: 100svh;
+  width: auto;
   background-image: url("./img/background376px.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,11 +85,12 @@ hr {
   height: 25px;
   border: 1px solid black;
   opacity: 15%;
+}
 
   .form-searchbar {
     height: 100px;
   }
-}
+
 /*Carousel*/
 .carousel {
   height: 75vh;
@@ -134,7 +134,7 @@ hr {
   width: 24px;
 }
 
-/*----------------------------- Hero press ----------------------*/
+/*--------------- Section press --------------*/
 .section-press {
   background-color: rgb(0, 0, 0);
   padding-bottom: 50px;
@@ -163,6 +163,51 @@ hr {
   width: 50px;
 }
 
+/*------section promotion----------*/
+.promotion {
+  height: 100vh;
+}
+/* Carousel version sm*/
+
+.carousel-promotion{
+  height: 290px;
+  min-height: 290px;
+  position: relative;
+
+}
+.carousel-promotion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background-color: rgb(58, 64, 222);
+}
+
+/* contenu version md*/
+.promotion-content {
+  height: 200px;
+  position: relative;
+  display: none;
+}
+.promotion-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background-color: rgb(58, 64, 222);
+}
+
+.container-md--button {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 @media screen and (min-width: 576px) {
   .header {
     background-image: url("./img/background576px.svg");
@@ -177,6 +222,7 @@ hr {
   
 }
 @media screen and (min-width: 767px) {
+  /*header*/
   .container-btn {
     display: block;
   }
@@ -184,6 +230,7 @@ hr {
     visibility: hidden;
     position: absolute;
   }
+  /*search bar*/
   .search-bar-container {
     display: flex;
     align-items: center;
@@ -201,9 +248,11 @@ hr {
   .label-separator {
     display: none;
   }
+  /*carousel*/
   .carousel-item {
     width: 324px;
   }
+  /*press*/
   .press-container {
     width: 70%;
     height: 180px;
@@ -222,6 +271,31 @@ hr {
   .img-press--elle { 
     width: 100px;
   }
+  /* promotion*/
+  .container-btn--promotion, .carousel-promotion {
+    display: none;
+  }
+  .chevron-sm {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .container-md--button {
+    display: block;
+  }
+  .promotion-content {
+    display: block;
+  }
+  .promotion-container {
+    border: 0.5px solid rgb(161, 161, 161);
+  }
+  .promotion-content::before {
+    display: none;
+  }
+  .promotion-content:hover {
+    box-shadow: 4px 4px 30px 10px rgb(151, 151, 151);
+    transition-duration: 1s;
+}
 }
 @media screen and (max-width: 992px) {
   .chevron-sm {
@@ -262,6 +336,10 @@ hr {
   .chevron-sm {
     display: none;
   }
+  .promotion-content {
+    height: 300px;
+  }
+  
 }
 @media screen and (max-width: 1200px) {
   .section-press {
