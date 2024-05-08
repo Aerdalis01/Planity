@@ -136,7 +136,7 @@ hr {
 /*--------------- Section press --------------*/
 .press {
   background-color: rgb(0, 0, 0);
-  padding-bottom: 50px;
+  padding: 50px 0 50px 0;
 }
 
 .press-container {
@@ -165,6 +165,7 @@ hr {
 /*------section promotion----------*/
 .promotion {
   height: auto;
+  padding: 50px 0 50px 0;
 }
 /* Carousel version sm*/
 
@@ -204,13 +205,14 @@ hr {
 .container-md--button {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
 }
 /* section recruit*/
 .recruit {
   height: auto;
   background-color: rgb(243, 243, 243);
+  padding: 50px 0 50px 0;
 }
 /*section city-search*/
 .table {
@@ -239,6 +241,10 @@ a{
     animation-duration: 2s;
   }
     
+  /*footer*/
+  .img-footer {
+    filter: brightness(0) invert(1);
+  }
   
   
 @media screen and (max-width: 576px) {
@@ -286,6 +292,10 @@ a{
   .form-searchbar {
     display: none;
   }
+  .promotion-container{
+    position: absolute;
+    visibility: hidden;
+  }
 }
 @media screen and (min-width: 767px) {
   /*header*/
@@ -319,10 +329,12 @@ a{
     width: 324px;
   }
   /*press*/
+  .press {
+  padding: 80px;
+  }
   .press-container {
     width: 70%;
     height: 180px;
-    margin: 100px;
     border: none;
   }
   .press-content {
@@ -337,6 +349,13 @@ a{
     width: 100px;
   }
   /* promotion*/
+  .promotion {
+    padding: 80px;
+  }
+  .promotion-container{
+    display: block;
+    border: none;
+  }
   .container-btn--promotion,
   .carousel-promotion {
     display: none;
@@ -345,28 +364,29 @@ a{
     position: absolute;
     visibility: hidden;
   }
-  .promotion-container{
-    display: block;
-    border: none;
-  }
   .container-md--button {
     display: block;
   }
   .promotion-content {
     display: block;
-    border-radius: 5px;
+    min-height: 300px;
   }
   .promotion-container {
     border: 0.5px solid rgb(161, 161, 161);
   }
-  .promotion-content::before {
-    display: none;
-  }
+  
   .promotion-content:hover {
     box-shadow: 4px 4px 30px 10px rgb(151, 151, 151);
     transition-duration: 1s;
   }
-  
+  /*section recruit*/
+  .recruit {
+    padding: 80px;
+  }
+  /* section city-search*/
+  .city {
+    padding: 80px;
+  }
   }
 
 @media screen and (max-width: 992px) {
@@ -416,11 +436,15 @@ a{
   .carousel-item {
     width: 475px;
   }
+  /*promotion*/
+  .promotion-content {
+  height: 300px;
+}
   .chevron-sm {
     display: none;
   }
-  .promotion-content {
-    height: 300px;
+  .promotion-content::before {
+    display: none;
   }
   /*recruit*/
   .recruit {
@@ -436,9 +460,9 @@ a{
 }
 
 @media screen and (max-width: 1200px) {
-  .press {
+  /* .press {
     padding: 30px 0 30px 0;
-  }
+  } */
   .press-container {
     width: 80%;
   }
