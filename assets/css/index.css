@@ -87,9 +87,9 @@ hr {
   opacity: 15%;
 }
 
-  .form-searchbar {
-    height: 100px;
-  }
+.form-searchbar {
+  height: 100px;
+}
 
 /*Carousel*/
 .carousel {
@@ -109,7 +109,6 @@ hr {
 .carousel-content.carousel-2:nth-child(1) {
   position: relative;
   overflow: hidden;
-
 }
 .carousel-content.carousel-3:nth-child(3) {
   position: absolute;
@@ -135,7 +134,7 @@ hr {
 }
 
 /*--------------- Section press --------------*/
-.section-press {
+.press {
   background-color: rgb(0, 0, 0);
   padding-bottom: 50px;
 }
@@ -150,8 +149,8 @@ hr {
 
 .press-content {
   border: none;
-  width: calc(100%/2);
-  height: calc(100%/2);
+  width: calc(100% / 2);
+  height: calc(100% / 2);
 }
 
 .img-press {
@@ -165,15 +164,14 @@ hr {
 
 /*------section promotion----------*/
 .promotion {
-  height: 100vh;
+  height: auto;
 }
 /* Carousel version sm*/
 
-.carousel-promotion{
+.carousel-promotion {
   height: 290px;
   min-height: 290px;
   position: relative;
-
 }
 .carousel-promotion::before {
   content: "";
@@ -186,10 +184,12 @@ hr {
 }
 
 /* contenu version md*/
+.promotion-container {
+  display: none;
+}
 .promotion-content {
   height: 200px;
   position: relative;
-  display: none;
 }
 .promotion-content::before {
   content: "";
@@ -207,6 +207,67 @@ hr {
   bottom: 0;
   left: 0;
 }
+/* section recruit*/
+.recruit {
+  height: auto;
+  background-color: rgb(243, 243, 243);
+}
+/*section city-search*/
+.table {
+  border-style: none;
+}
+td {
+  border-style: none;
+}
+a{
+  text-decoration: none;
+  color:black
+}
+/*section city-search*/
+.city {
+  padding: 50px 0 50px 0;
+}
+
+/*section faq*/
+  .faq {
+    padding: 50px 0 50px 0;
+  }
+  .accordion {
+    padding: 50px 50px 50px 50px;
+  }
+  .accordion-collapse {
+    animation-duration: 2s;
+  }
+    
+  
+  
+@media screen and (max-width: 576px) {
+  .tr-responsive{
+    clear:both;
+    
+
+    td{
+        display:block;
+        float:left;
+        border:none !important;
+
+        &:first-child{
+            width:50%;
+        }
+
+        &:nth-child(2){
+            width:25%;
+        }
+
+        &:nth-child(3){
+            width:50%;
+        }
+        &:nth-child(4){
+          width:50%;
+      }
+    }
+}
+}
 
 @media screen and (min-width: 576px) {
   .header {
@@ -214,12 +275,17 @@ hr {
     background-size: cover;
     background-position: top;
   }
+  .promotion {
+    padding: 50px 0 50px 0;
+  }
+  .recruit {
+    padding: 50px 0 50px 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .form-searchbar {
     display: none;
   }
-  
 }
 @media screen and (min-width: 767px) {
   /*header*/
@@ -261,30 +327,34 @@ hr {
   }
   .press-content {
     border: 1px solid grey;
-    width: calc(100%/4);
+    width: calc(100% / 4);
     height: auto;
   }
   .img-press {
-    
     width: 160px;
   }
-  .img-press--elle { 
+  .img-press--elle {
     width: 100px;
   }
   /* promotion*/
-  .container-btn--promotion, .carousel-promotion {
+  .container-btn--promotion,
+  .carousel-promotion {
     display: none;
   }
   .chevron-sm {
     position: absolute;
     visibility: hidden;
   }
-
+  .promotion-container{
+    display: block;
+    border: none;
+  }
   .container-md--button {
     display: block;
   }
   .promotion-content {
     display: block;
+    border-radius: 5px;
   }
   .promotion-container {
     border: 0.5px solid rgb(161, 161, 161);
@@ -295,11 +365,25 @@ hr {
   .promotion-content:hover {
     box-shadow: 4px 4px 30px 10px rgb(151, 151, 151);
     transition-duration: 1s;
-}
-}
+  }
+  
+  }
+
 @media screen and (max-width: 992px) {
   .chevron-sm {
-    display:block;
+    display: block;
+  }
+  .city-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .city-h2 {
+    text-align: center;
+  }
+  .city-hr {
+    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 992px) {
@@ -331,7 +415,6 @@ hr {
   }
   .carousel-item {
     width: 475px;
-    
   }
   .chevron-sm {
     display: none;
@@ -339,15 +422,26 @@ hr {
   .promotion-content {
     height: 300px;
   }
-  
+  /*recruit*/
+  .recruit {
+    padding: 100px;
+  }
+  /*city-search*/
+  .city-title {
+    align-items: start;
+  }
+  .city-hr {
+    align-items: start;
+  }
 }
+
 @media screen and (max-width: 1200px) {
-  .section-press {
-    padding:  30px 0 30px 0;
+  .press {
+    padding: 30px 0 30px 0;
   }
   .press-container {
     width: 80%;
-}
+  }
 }
 @media screen and (min-width: 1200px) {
   .header {
@@ -368,8 +462,8 @@ hr {
   }
   .carousel-item {
     width: 550px;
-}
-.section-press {
-  padding:  50px 0 50px 0;
-}
+  }
+  .press {
+    padding: 50px 0 50px 0;
+  }
 }
