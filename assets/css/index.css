@@ -18,16 +18,24 @@ hr {
   position: relative;
 }
 /*Navbar mobil modal*/
-.modal  {
+.mobil  {
   background-color: white;
   height: 100svh;
   width: 300px;
   position: fixed;
   top: 0;
-  left: 0;
-  
+  border-radius: 10px;
+  left: -100vw;
+  z-index: 9999;
+  transition: left 0.9s;
 }
-
+.change-mobil {
+  left: 0;
+}
+.mobil ul li {
+  border: none;
+  list-style-type: none;
+}
 /*Navbar  */
 .navbar {
   height: 60px;
