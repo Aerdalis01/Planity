@@ -15,6 +15,17 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  position: relative;
+}
+/*Navbar mobil modal*/
+.modal  {
+  background-color: white;
+  height: 100svh;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
 }
 
 /*Navbar  */
