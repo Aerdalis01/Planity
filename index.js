@@ -53,7 +53,13 @@ else {
 // Dans la section carousel 
 //1 => au clic sur un des chevrons passé à l'image suivantes
 //1 au clic sur le btnNext et le btnPrevious l'image change
-// Je stocke les sources des svg dans des listes
+// Je stocke les sources des svg dans des listes et les textes 
+// const carousel0: string[] = [
+//   ".text-container1",
+//   ".text-container2",
+//   ".text-container3",
+//   ".text-container4",
+// ];
 var carousel1 = [
     "/assets/css/img/barbier-svg.svg",
     "/assets/css/img/manucure-svg.svg",
@@ -73,18 +79,29 @@ var carousel3 = [
     "/assets/css/img/barbier-svg.svg",
     "/assets/css/img/coiffeur-svg.svg",
 ];
+//
+var carouselIds = ['carousel1', 'carousel2', 'carousel3'];
 // Initialisez un index pour chaque carrousel
 var carousel1Index = 0;
 var carousel2Index = 0;
 var carousel3Index = 0;
 // Écoutez le clic sur le bouton "Next" pour chaque carrousel
 var nextButton = document.getElementById('next');
+var nextButton1 = document.getElementById('next1');
 //console.log(nextButton);
 var prevButton = document.getElementById('prev');
+var prevButton1 = document.getElementById('prev1');
 //console.log(prevButton);
+// Supposons que votre bouton ait l'ID 'nextButton'
+if (nextButton)
+    nextButton.addEventListener('click', function () {
+        var carouselTexts = document.getElementById('carousel4');
+        if (carouselTexts)
+            carouselTexts.setAttribute('data-bs-slide', 'next');
+    });
 if (nextButton && prevButton) {
     nextButton.addEventListener('click', function () {
-        //  console.log("btn next cliqué");
+        //console.log("btn next cliqué");
         carousel1Index = (carousel1Index + 1) % carousel1.length;
         updateCarouselImage("carousel1", carousel1Index);
         carousel2Index = (carousel2Index + 1) % carousel2.length;
@@ -93,22 +110,42 @@ if (nextButton && prevButton) {
         updateCarouselImage("carousel3", carousel3Index);
     });
     prevButton.addEventListener('click', function () {
-        //console.log("btn prev cliqué");
-        carousel1Index = (carousel1Index - 1) % carousel1.length;
+        //console.log("btn prev cliqué")
+        carousel1Index = (carousel1Index - 1 + carousel1.length) % carousel1.length;
         updateCarouselImage("carousel1", carousel1Index);
-        carousel2Index = (carousel2Index - 1) % carousel2.length;
+        carousel2Index = (carousel2Index - 1 + carousel2.length) % carousel2.length;
         updateCarouselImage("carousel2", carousel2Index);
-        carousel3Index = (carousel3Index - 1) % carousel3.length;
+        carousel3Index = (carousel3Index - 1 + carousel3.length) % carousel3.length;
+        updateCarouselImage("carousel3", carousel3Index);
+    });
+}
+if (nextButton1 && prevButton1) {
+    nextButton1.addEventListener('click', function () {
+        //console.log("btn next cliqué");
+        carousel1Index = (carousel1Index + 1) % carousel1.length;
+        updateCarouselImage("carousel1", carousel1Index);
+        carousel2Index = (carousel2Index + 1) % carousel2.length;
+        updateCarouselImage("carousel2", carousel2Index);
+        carousel3Index = (carousel3Index + 1) % carousel3.length;
+        updateCarouselImage("carousel3", carousel3Index);
+    });
+    prevButton1.addEventListener('click', function () {
+        //console.log("btn prev cliqué")
+        carousel1Index = (carousel1Index - 1 + carousel1.length) % carousel1.length;
+        updateCarouselImage("carousel1", carousel1Index);
+        carousel2Index = (carousel2Index - 1 + carousel2.length) % carousel2.length;
+        updateCarouselImage("carousel2", carousel2Index);
+        carousel3Index = (carousel3Index - 1 + carousel3.length) % carousel3.length;
         updateCarouselImage("carousel3", carousel3Index);
     });
 }
 // Fonction pour mettre à jour l'image d'un carrousel
-function updateCarouselImage(carouselAutoplaying, index) {
-    var carouselItems = document.querySelectorAll("#".concat(carouselAutoplaying, " .carousel-item--main"));
-    //console.log(carouselItems);
+function updateCarouselImage(carouselIds, index) {
+    var carouselItems = document.querySelectorAll("#".concat(carouselIds, " .carousel-item--main"));
+    console.log(carouselItems);
     //console.log(index);
     carouselItems.forEach(function (item, i) {
-        if (i = index) {
+        if (i === index) {
             item.classList.add("active");
         }
         else {
@@ -129,13 +166,3 @@ textItem.forEach(function (item) {
         });
     }
 });
-//section promotion
-//Au survol des div promotion-content faire apparaître un before avec animation
-// const promoHover = document.querySelectorAll('.promotion-content');
-// console.log(promoHover);
-// promoHover.forEach((item) => {
-//   item.addEventListener('mousenter', () => {
-//     console.log(item);
-//     item.classList.add('promotion-content2');
-//   });
-// });

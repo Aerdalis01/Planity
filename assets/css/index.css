@@ -265,18 +265,13 @@ a{
   }
   .accordion {
     padding: 50px 50px 50px 50px;
-    transition:  2s;
   }
-  .accordion-button {
-    transition: top 2s;
-  }
-  .collapse {
-    transition: top 2s;
-  }
-  .accordion-body {
-    transition: top 2s;
-  }
-    
+  .collapsing {
+    transition: height 0.6s;
+}
+  
+  
+  
   /*footer*/
   .img-footer {
     filter: brightness(0) invert(1);
@@ -409,7 +404,6 @@ a{
   }
   .promotion-content:hover {
     box-shadow: 4px 4px 30px 10px rgb(151, 151, 151);
-    transition-duration: 1s;
     .fs-5:before {
       content: "";
       position: absolute;
