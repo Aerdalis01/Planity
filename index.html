@@ -14,40 +14,40 @@
 <body class="body">
   <header class="header">
     <!--Début Header-->
-    
-    <nav class="navbar navbar-expand-lg overflow-hidden w-100">
+
+    <nav class="navbar navbar-expand-lg overflow-hidden fixed-top pe-4 w-100">
       <!--Début Navbar-->
       <div class="container-fluid m-0 p-0">
-        <div class="row col-12 align-items-center flex-nowrap ">
-          <div class="container-faBurger col-2 col-md-1 ps-3">
+        <div class="row col-12 align-items-center flex-nowrap justify-content-between ">
+          <div class="container-faBurger col-1 ps-4">
             <i class="fa-solid fa-bars fa-xl"></i>
           </div>
           <div class="container-navbar col-lg-5 order-1">
             <ul class="navbar-nav d-flex justify-content-center">
               <li class="nav-item">
-                <a class="nav-link" href="#coiffeur">Coiffeur</a>
+                <a id="navbar-link" class="nav-link navbar-link" href="#coiffeur">Coiffeur</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="#barbier">Barbier</a>
+                <a id="navbar-link" class="nav-link navbar-link" href="#barbier">Barbier</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="manucure">Manucure</a>
+                <a id="navbar-link" class="nav-link navbar-link" href="manucure">Manucure</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#institut">Institut de beauté</a>
+                <a id="navbar-link" class="nav-link navbar-link" href="#institut">Institut de beauté</a>
               </li>
             </ul>
           </div>
-          <div class="col-8 col-md-2 col-lg-2 order-0 text-center">
+          <div class="col-10 col-md-2 col-lg-2 ps-5 order-0 text-center">
             <a class="navbar-brand logo col" href="#home">
-              <img src="./assets/css/img/logo.svg" alt="logo Planity">
+              <img class="img-logo" src="./assets/css/img/logo.svg" alt="logo Planity">
             </a>
           </div>
-          <div class="container-btn text-end  col-md-9 col-lg-5 order-2 p-0">
+          <div class="container-btn text-end  col-md-9 col-lg-5 order-2">
             <a class="btn btn-nav me-3 " href="#" role="button">Ajoutez votre établissement</a>
             <a class="btn btn-black btn-dark  mx-1" href="#" role="button">Se connecter</a>
           </div>
-          <a href="#" class="link-user d-flex justify-content-center align-items-center"> <i
+          <a href="#" class="link-user d-flex  justify-content-center align-items-center"> <i
               class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i></a>
         </div>
       </div>
@@ -56,30 +56,30 @@
     <!--Début Navbar mobil modal-->
     <div class="mobil container-fluid">
       <div class="row">
-      <div class="col-12">
-        <div class="container-fa-xmark d-flex justify-content-end pt-2">
-          <i class="fa-solid fa-xmark fa-lg"></i>
+        <div class="col-12">
+          <div class="container-fa-xmark d-flex justify-content-end pt-2">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="col-12 ">
+            <a class="btn btn-black btn-dark  w-100 mt-5" href="#" role="button">Se connecter</a>
+            <a class="btn btn-nav w-100 py-2 mt-4" href="#" role="button">Ajoutez votre établissement</a>
+          </div>
+          <ul class="list-group my-5 p-0 h-100">
+            <li class="list-group-item fw-semibold py-4">
+              <a class="nav-link" href="#coiffeur">Coiffeur</a>
+            </li>
+            <li class="list-group-item text-dark fw-semibold py-4">
+              <a class="nav-link " href="#barbier">Barbier</a>
+            </li>
+            <li class="list-group-item fw-semibold py-4">
+              <a class="nav-link " href="#manucure">Manucure</a>
+            </li>
+            <li class="list-group-item fw-semibold py-4">
+              <a class="nav-link" href="#institut">Institut de beauté</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-12 ">
-      <a class="btn btn-black btn-dark  w-100 mt-5" href="#" role="button">Se connecter</a>
-      <a class="btn btn-nav w-100 py-2 mt-4" href="#" role="button">Ajoutez votre établissement</a>
-    </div>
-      <ul class="list-group my-5 p-0 h-100">
-        <li class="list-group-item fw-semibold py-4">
-          <a class="nav-link" href="#coiffeur">Coiffeur</a>
-        </li>
-        <li class="list-group-item text-dark fw-semibold py-4">
-          <a class="nav-link " href="#barbier">Barbier</a>
-        </li>
-        <li class="list-group-item fw-semibold py-4">
-          <a class="nav-link " href="manucure">Manucure</a>
-        </li>
-        <li class="list-group-item fw-semibold py-4">
-          <a class="nav-link" href="#institut">Institut de beauté</a>
-        </li>
-      </ul>
-    </div>
-    </div>
+      </div>
     </div>
     <!--Début section search-bar-->
     <div class="h-25"></div>
@@ -143,96 +143,108 @@
               </div>
               <!--Début carousel-->
               <div class="col d-flex justify-content-center align-items-center text-center ">
-                <div id="carouselinkAutoplaying" class="carousel slide col-6  pt-3 pb-5 h-50" data-bs-ride="carousel">
+                <div id="carouselinkAutoplaying" class="carousel carousel-0 col-6  pt-3 pb-5 h-50"
+                  data-bs-ride="carousel">
                   <div class="carousel-inner">
-                    <div class="carousel-item active w-100">
+                    <div class="carousel-item carousel-item--main active  w-100" data-bs-interval="10000">
                       <h2> <a
                           class="link-text--coiffeur link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold w-100"
                           href="/">Coiffeur</a></h2>
-                      <p class="link-text1">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
+                      <div class="text-container">
+                        <p class="fw-semibold text-secondary">Envie de changer de tête ou simplement de rafraîchir votre
+                          coupe ? Vous avez
+                          besoin
+                          des
+                          conseils d'un expert pour sublimer votre style.</p>
 
-                      <p id="text1" class="text-1">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel
-                        salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <button type="button" class="btn fw-semibold text-decoration-underline">Voir plus</button>
+                        <div class="text-content">
+                          <p class="fw-semibold text-secondary">Quels sont les meilleurs salons de coiffure autour de
+                            chez
+                            vous? Pour
+                            répondre à
+                            ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié.
+                            Découvrez
+                            quel
+                            salon
+                            est fait
+                            pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
+                            rendez-vous
+                            sans
+                            sortir
+                            de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbs!</p>
+                        </div>
+                        <span id="btn" class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
+                      </div>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item--main w-100">
                       <h2> <a
                           class="link-text--barbier link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold "
                           href="/">Barbier</a></h2>
-                      <p class="link-text2">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
-
-                      <p id="text2" class="text-2">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel
-                        salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <span class="btn-2" id="btn-text--2">Voir plus</span>
+                      <div class="text-container">
+                        <p class="fw-semibold text-secondary">Vous rêvez d’une barbe bien dessinée, que l’on chouchoute
+                          votre visage et que l’on dompte votre moustache.</p>
+                        <div class="text-content">
+                          <p class=" fw-semibold text-secondary">Vous avez une idée bien précise de la façon
+                            dont vous
+                            voulez voir votre barbe : coupe sophistiquée, look hipster, effet naturel, vintage ou
+                            tendance, Planity vous propose la crème de la crème en matière de barbiers ! Nos
+                            prestataires
+                            vous feront vivre un moment de détente étonnant, au cœur de salons où le bien-être et la
+                            tradition s’allient pour un résultat au-delà de vos attentes ! N’attendez plus pour réserver
+                            votre rendez-vous et offrez à votre barbe le meilleur spécialiste !</p>
+                        </div>
+                        <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
+                      </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item--main w-100">
                       <h2> <a
                           class="link-text--manucure link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold"
                           href="/">Manucure</a></h2>
-                      <p class="link-text-3">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous
-                        avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
+                      <div class="text-container">
+                        <p class="fw-semibold text-secondary">On raconte que les mains sont le reflet de la façon dont
+                          on
+                          prend soin de soi.</p>
 
-                      <p id="text3" class="text-3">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel
-                        salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <span class="btn-3" id="btn-text3">Voir plus</span>
+                        <div class="text-content">
+                          <p class="fw-semibold text-secondary">Il est donc tout à fait naturel d’avoir envie de les
+                            chouchouter de la même façon que vous prenez soin de votre corps. Notre sélection de salons
+                            et
+                            de professionnels dédiés aux mains et aux pieds n’attend que vous. Manucure, beauté des
+                            pieds,
+                            mais aussi pose de vernis, massages ciblés et soins précieux, vous n’avez qu’à choisir,
+                            quelle
+                            prestation vous ferait particulièrement plaisir. Prenez ensuite rendez-vous en ligne, et
+                            laissez vous faire.</p>
+
+                        </div>
+                        <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
+                      </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item--main w-100">
                       <h2> <a
                           class="link-text--institut link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold"
                           href="/">Institut de beauté</a></h2>
-                      <p class="link-text4">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
+                      <div class="text-container">
+                        <p class="fw-semibold text-secondary">Vos envies de bien-être ont besoin d’être assouvies
+                          rapidement et surement.</p>
 
-                      <p id="text4" class="text-4">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <span class="btn-4" id="btn-text--4">Voir plus</span>
+                        <div class="text-content">
+                          <p class="fw-semibold text-secondary">Le service de prise de rendez-vous en ligne développé
+                            par
+                            Planity vous permet de choisir l’établissement qui sera le plus à même de satisfaire votre
+                            exigence de détente. Massage, gommage, soins précis, épilation, nos prestataires mettent
+                            tout
+                            en
+                            œuvre pour faire de ce moment la pause que vous méritez. Prenez rendez-vous sur notre
+                            plateforme
+                            en ligne auprès de l’établissement qui saura tenir toutes ses promesses et profitez d’une
+                            pause
+                            détente inoubliable !</p>
+
+                        </div>
+                        <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -242,39 +254,39 @@
             <div class="carousel-content container-fluid col d-flex justify-content-center">
               <div id="carouselAutoplaying" class="carousel carousel-1 slide h-50 mx-5 p-0" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div class="carousel-item carousel-item--main active" data-bs-interval="10000">
                     <img src="/assets/css/img/barbier-svg.svg" class="d-block rounded-3  w-100"
                       alt="Homme chez le barbier">
                   </div>
-                  <div class="carousel-item">
-                    <img src="/assets/css/img/coiffeur-svg.svg" class="d-block rounded-3 w-100"
-                      alt="Femme chez le coiffeur">
-                  </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item carousel-item--main">
                     <img src="/assets/css/img/manucure-svg.svg" class="d-block rounded-3 w-100" alt="Main manucuré">
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item carousel-item--main">
                     <img src="/assets/css/img/institut-svg.svg" class="d-block rounded-3 w-100"
                       alt="Image de maquillage">
+                  </div>
+                  <div class="carousel-item carousel-item--main">
+                    <img src="/assets/css/img/coiffeur-svg.svg" class="d-block rounded-3 w-100"
+                      alt="Femme chez le coiffeur">
                   </div>
                 </div>
               </div>
               <!--  Carousel 2eme partie -->
               <div id="carouselAutoplaying" class="carousel carousel-2 slide h-50 mx-5 p-0" data-bs-ride="carousel">
                 <div class="carousel-inner w-100">
-                  <div class="carousel-item active">
-                    <img src="/assets/css/img/institut-svg.svg" class="d-block rounded-3 w-100"
-                      alt="Homme chez le barbier">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/assets/css/img/barbier-svg.svg" class="d-block rounded-3 w-100"
+                  <div class="carousel-item carousel-item--main active " data-bs-interval="10000">
+                    <img src="/assets/css/img/coiffeur-svg.svg" class="d-block rounded-3 w-100"
                       alt="Femme chez le coiffeur">
                   </div>
-                  <div class="carousel-item">
-                    <img src="/assets/css/img/coiffeur-svg.svg" class="d-block rounded-3 w-100" alt="Main manucuré">
+                  <div class="carousel-item carousel-item--main">
+                    <img src="/assets/css/img/barbier-svg.svg" class="d-block rounded-3 w-100"
+                      alt="Homme chez le barbier">
                   </div>
-                  <div class="carousel-item">
-                    <img src="/assets/css/img/manucure-svg.svg" class="d-block rounded-3 w-100"
+                  <div class="carousel-item carousel-item--main">
+                    <img src="/assets/css/img/manucure-svg.svg" class="d-block rounded-3 w-100" alt="Main manucuré">
+                  </div>
+                  <div class="carousel-item carousel-item--main">
+                    <img src="/assets/css/img/institut-svg.svg" class="d-block rounded-3 w-100"
                       alt="Image de maquillage">
                   </div>
                 </div>
@@ -288,130 +300,137 @@
                   <hr class="border-primary border-2 opacity-75">
                 </span>
 
-                <div id="carouselinkAutoplaying" class="carousel carousel-text--lg slide pt-3 pb-0  h-50"
+                <div id="carouselinkAutoplaying" class="carousel  carousel-text--lg slide pt-3 pb-0  h-50"
                   data-bs-ride="carousel">
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item carousel-item--main active " data-bs-interval="10000">
                       <h2 class="h2 Underline opacity 0"> <a
                           class="link-text--coiffeur link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold"
                           href="/">Coiffeur</a></h2>
-                      <p class="link-text1">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous avez
+                        <div class="text-container">
+                      <p class="fw-semibold text-secondary">Envie de changer de tête ou simplement de rafraîchir votre
+                        coupe ? Vous avez
                         besoin
                         des
                         conseils d'un expert pour sublimer votre style.</p>
-
-                      <p id="text1" class="text-1">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel
-                        salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <button type="button" class="btn fw-semibold text-decoration-underline">Voir plus</button>
+                      
+                      <div class="text-content">
+                        <p class="fw-semibold text-secondary">Quels sont les meilleurs salons de coiffure autour de chez
+                          vous? Pour
+                          répondre à
+                          ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
+                          quel
+                          salon
+                          est fait
+                          pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
+                          rendez-vous
+                          sans
+                          sortir
+                          de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
+                      </div>
+                      <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
                     </div>
+                    
+                    <div class="chevron-sm mt-3 w-100">
+                      <img id="" class="circle-chevron--left" src="/assets/css/img/circle-chevron-left.svg" alt="Flèche à retour">
+                      <img id="" class="circle-chevron--right" src="/assets/css/img/circle-chevron-right.svg" alt="Flèche suivant">
+                    </div>
+                  </div>
 
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item--main">
                       <h2 class="h2 Underline opacity 0"> <a
                           class="link-text--barbier link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold"
                           href="/">Barbier</a></h2>
-                      <p class="link-text2">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
+                          <div class="text-container">
+                      <p class="fw-semibold text-secondary">Vous rêvez d’une barbe bien dessinée, que l’on chouchoute
+                        votre visage et que l’on dompte votre moustache.</p>
+                      
+                      <div class="text-content">
+                        <p class="fw-semibold text-secondary">Vous avez une idée bien précise de la façon dont vous
+                          voulez voir votre barbe : coupe sophistiquée, look hipster, effet naturel, vintage ou
+                          tendance, Planity vous propose la crème de la crème en matière de barbiers ! Nos prestataires
+                          vous feront vivre un moment de détente étonnant, au cœur de salons où le bien-être et la
+                          tradition s’allient pour un résultat au-delà de vos attentes ! N’attendez plus pour réserver
+                          votre rendez-vous et offrez à votre barbe le meilleur spécialiste !</p>
+                      </div>
+                      <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
 
-                      <p id="text2" class="text-2">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel
-                        salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <span class="btn-2" id="btn-text--2">Voir plus</span>
                     </div>
-                    <div class="carousel-item">
+                    </div>
+                    <div class="carousel-item carousel-item--main">
                       <h2 class="h2 Underline opacity 0"> <a
                           class="link-text--manucure link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold"
-                          href="/">Manucure</a></h2>
-                      <p class="link-text-3">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous
-                        avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
-
-                      <p id="text3" class="text-3">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel
-                        salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <span class="btn-3" id="btn-text3">Voir plus</span>
+                          href="/">Manucure</a></h2> 
+                          <div class="text-container">
+                      <p class="fw-semibold text-secondary">On raconte que les mains sont le reflet de la façon dont on
+                        prend soin de soi.</p>
+                        <div class="text-content">
+                          <p class="fw-semibold text-secondary">Il est donc tout à fait naturel d’avoir envie de les
+                            chouchouter de la même façon que vous prenez soin de votre corps. Notre sélection de salons et
+                            de professionnels dédiés aux mains et aux pieds n’attend que vous. Manucure, beauté des pieds,
+                            mais aussi pose de vernis, massages ciblés et soins précieux, vous n’avez qu’à choisir, quelle
+                            prestation vous ferait particulièrement plaisir. Prenez ensuite rendez-vous en ligne, et
+                            laissez vous faire.</p>
+                          </div>
+                          <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
+                        </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item--main">
                       <h2 class="h2"> <a
                           class="link-text--institut link-underline link-underline-opacity-0 text-dark fs-4 fw-semibold"
                           href="/">Institut de beauté</a></h2>
-                      <p class="link-text4">Envie de changer de tête ou simplement de rafraîchir votre coupe ? Vous avez
-                        besoin
-                        des
-                        conseils d'un expert pour sublimer votre style.</p>
-
-                      <p id="text4" class="text-4">Quels sont les meilleurs salons de coiffure autour de chez vous? Pour
-                        répondre à
-                        ces questions, le portail de prises de rendez-vous Planity est votre meilleur allié. Découvrez
-                        quel salon
-                        est fait
-                        pour vous, les coiffeurs spécialisés, les visagistes aux meilleurs conseils, et prenez
-                        rendez-vous
-                        sans
-                        sortir
-                        de chez vous, quand vous le souhaitez&nbsp;! Vos cheveux méritent le meilleur&nbsp;!</p>
-                      <span class="btn-4" id="btn-text--4">Voir plus</span>
+                          <div class="text-container">
+                      <p class="fw-semibold text-secondary">Vos envies de bien-être ont besoin d’être assouvies
+                        rapidement et surement.</p>
+                      
+                      <div class="text-content">
+                        <p class="fw-semibold text-secondary">Le service de prise de rendez-vous en ligne développé par
+                          Planity vous permet de choisir l’établissement qui sera le plus à même de satisfaire votre
+                          exigence de détente. Massage, gommage, soins précis, épilation, nos prestataires mettent tout
+                          en
+                          œuvre pour faire de ce moment la pause que vous méritez. Prenez rendez-vous sur notre
+                          plateforme
+                          en ligne auprès de l’établissement qui saura tenir toutes ses promesses et profitez d’une
+                          pause
+                          détente inoubliable !</p>
+                        </div>
+                        <span class="btn-VoirPlus text-decoration-underline fw-semibold">Voir plus</span>
+                    </div>
                     </div>
                   </div>
                 </div>
-                <div class="d-flex px-1 mt-3 w-100 ">
-                  <img class="circle-chevron mx-2" src="/assets/css/img/circle-chevron-left.svg" alt="Flèche à retour">
-                  <img class="circle-chevron" src="/assets/css/img/circle-chevron-right.svg" alt="Flèche suivant">
+                <div class="chevron-lg d-flex px-1 mt-3">
+                  <img id="prev" class="circle-chevron--left mx-2" src="/assets/css/img/circle-chevron-left.svg"
+                    alt="Flèche à retour">
+                  <img id="next" class="circle-chevron--right" src="/assets/css/img/circle-chevron-right.svg"
+                    alt="Flèche suivant">
                 </div>
               </div>
               <!-- carousel 4eme partie-->
               <div id="carouselAutoplaying" class="carousel carousel-3 slide h-50  mx-5 p-0" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div class="carousel-item carousel-item--main active " data-bs-interval="10000">
                     <img src="/assets/css/img/manucure-svg.svg" class="d-block rounded-2 w-100"
-                      alt="Homme chez le barbier">
+                      alt="Main manucuré">
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item carousel-item--main">
                     <img src="/assets/css/img/institut-svg.svg" class="d-block rounded-3 w-100"
-                      alt="Femme chez le coiffeur">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/assets/css/img/barbier-svg.svg" class="d-block rounded-3 w-100" alt=" Main manucuré">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/assets/css/img/coiffeur-svg.svg" class="d-block rounded-3 w-100"
                       alt="Image de maquillage">
+                  </div>
+                  <div class="carousel-item carousel-item--main">
+                    <img src="/assets/css/img/barbier-svg.svg" class="d-block rounded-3 w-100" alt="Homme chez le barbier">
+                  </div>
+                  <div class="carousel-item carousel-item--main">
+                    <img src="/assets/css/img/coiffeur-svg.svg" class="d-block rounded-3 w-100"
+                    alt="Femme chez le coiffeur">
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="chevron-sm mt-3 w-100">
-            <img class="circle-chevron" src="/assets/css/img/circle-chevron-left.svg" alt="Flèche à retour">
-            <img class="circle-chevron" src="/assets/css/img/circle-chevron-right.svg" alt="Flèche suivant">
+            <img class="circle-chevron--left" src="/assets/css/img/circle-chevron-left.svg" alt="Flèche à retour">
+            <img class="circle-chevron--right" src="/assets/css/img/circle-chevron-right.svg" alt="Flèche suivant">
           </div>
         </div>
       </div>
@@ -459,7 +478,7 @@
           <div id="carouselAutoplaying" class="carousel slide d-flex align-items-center h-100 w-100 "
             data-bs-ride="carousel">
             <div class="carousel-inner text-center align-items-center">
-              <div class="carousel-item active  w-100">
+              <div class="carousel-item active  w-100" data-bs-interval="10000">
                 <div class="fs-1 fw-semibold">+50% <p class="fs-4 fw-normal">de fréquence sur les rdv pris en ligne</p>
                 </div>
               </div>
@@ -490,11 +509,11 @@
           </div>
         </div>
         <div class="chevron-sm mt-3 w-100">
-          <img class="circle-chevron" src="/assets/css/img/circle-chevron-left.svg" alt="Flèche à retour">
-          <img class="circle-chevron" src="/assets/css/img/circle-chevron-right.svg" alt="Flèche suivant">
+          <img class="circle-chevron--left" src="/assets/css/img/circle-chevron-left.svg" alt="Flèche à retour">
+          <img class="circle-chevron--right" src="/assets/css/img/circle-chevron-right.svg" alt="Flèche suivant">
         </div>
         <div class="promotion-container row col-9 d-flex justify-content-center rounded-4">
-          <div
+          <div id="promoContent"
             class="promotion-content d-flex align-items-center  justify-content-center col-md-6 col-lg-4 rounded-4 border p-2">
             <div class="fs-1">+50% <p class="fs-5">de fréquence sur les rdv pris en ligne</p>
               <div class="container-md--button w-100">
@@ -503,7 +522,7 @@
               </div>
             </div>
           </div>
-          <div
+          <div id="promoContent"
             class="promotion-content d-flex  align-items-center  justify-content-center col-md-6 col-lg-4 rounded-4 border p-2">
             <div class="fs-1">4x <p class="fs-5">moins d'oublis avec les rappels sms des rendez-vous</p>
               <div class="container-md--button w-100">
@@ -512,7 +531,7 @@
               </div>
             </div>
           </div>
-          <div
+          <div id="promoContent"
             class="promotion-content d-flex  align-items-center  justify-content-center col-md-6 col-lg-4 border rounded-4 p-2">
             <div class="fs-1">50% <p class="fs-5">des rdv en ligne pris en dehors des horaires
                 d'ouverture
@@ -523,7 +542,7 @@
               </div>
             </div>
           </div>
-          <div
+          <div id="promoContent"
             class="promotion-content d-flex  align-items-center  justify-content-center col-md-6 col-lg-4 col-lg-3 border rounded-4 p-2">
             <div class="fs-1">+40 000 <p class="fs-5">Salons & institus</p>
               <div class="container-md--button w-100">
@@ -532,7 +551,7 @@
               </div>
             </div>
           </div>
-          <div
+          <div id="promoContent"
             class="promotion-content d-flex  align-items-center  justify-content-center col-md-6 col-lg-4 border rounded-4 p-2">
             <div class="fs-1">4 RDV <p class="fs-5">Pris toutes les secondes</p>
               <div class="container-md--button w-100">
@@ -541,7 +560,7 @@
               </div>
             </div>
           </div>
-          <div
+          <div id="promoContent"
             class="promotion-content d-flex  align-items-center  justify-content-center col-md-6 col-lg-4 border rounded-4 p-2">
             <div class="fs-1">>5 milliards € <p class="fs-5"> De rendez-vous vendus</p>
               <div class="container-md--button w-100">
@@ -812,118 +831,118 @@
   <!--Fin main-->
 
   <!-- Début footer-->
-      <footer class="text-center text-lg-start text-white bg-dark pt-4" >
-        <div class="container pb-0">
-          <section class="">
+  <footer class="text-center text-lg-start text-white bg-dark pt-4">
+    <div class="container pb-0">
+      <section class="">
 
-            <div class="row w-100">
+        <div class="row w-100">
 
-              <div class="col-lg-3 mb-4 mb-md-0">
-                <img class="img-footer col-4" src="./assets/css/img/logo.svg" alt="logo Planity">
-                <div class="pt-3">
-                <i class="fa-brands fa-square-facebook fa-2xl pe-2"></i>
-                <i class="fa-brands fa-square-twitter fa-2xl"></i> 
-              </div>
-              </div>
-
-              <div class="col-lg-3 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Á propos de Planity</h5>
-
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-white">Ajoutez votre établissement</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Rejoignez-nous</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">CGU</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Planity belgique</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Planity begië</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Planity Deutcshland</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Politique de confidentialité</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Politique de lutte contre les contenus illicites</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Gestion des cookies</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-3 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Trouvez votre prestation</h5>
-
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-white">Coiffeur</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Institut de beauté</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Barbier</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Manucure et beauté des pieds</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Spa</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-3 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Recherches fréquentes</h5>
-
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#!" class="text-white">Coiffeur Paris</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Coiffeur Bordeaux</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Coiffeur Lyon</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">Coiffeur Toulouse</a>
-                  </li>
-                </ul>
-              </div>
+          <div class="col-lg-3 mb-4 mb-md-0">
+            <img class="img-footer col-4" src="./assets/css/img/logo.svg" alt="logo Planity">
+            <div class="pt-3">
+              <i class="fa-brands fa-square-facebook fa-2xl pe-2"></i>
+              <i class="fa-brands fa-square-twitter fa-2xl"></i>
             </div>
-            
-          </section>
+          </div>
 
-          <hr class="mb-4 w-100" />
+          <div class="col-lg-3 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Á propos de Planity</h5>
 
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Ajoutez votre établissement</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Rejoignez-nous</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">CGU</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Planity belgique</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Planity begië</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Planity Deutcshland</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Politique de confidentialité</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Politique de lutte contre les contenus illicites</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Gestion des cookies</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
 
-          <!-- Copyright -->
+          <!--Grid column-->
+          <div class="col-lg-3 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Trouvez votre prestation</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Coiffeur</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Institut de beauté</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Barbier</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Manucure et beauté des pieds</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Spa</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Recherches fréquentes</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Coiffeur Paris</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Coiffeur Bordeaux</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Coiffeur Lyon</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Coiffeur Toulouse</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="text-center p-3 w-100" style="background-color: rgba(0, 0, 0, 0.2)">
-          © 2024 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
+
+      </section>
+
+      <hr class="mb-4 w-100" />
+
+
+      <!-- Copyright -->
+    </div>
+    <div class="text-center p-3 w-100" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2024 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
   </footer>
   <!---->
   <script src="/assets/lib/FontAwesome/js/all.js"></script>
   <script src="/assets/lib/Bootstrap/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
-    <script src="/index.js"></script>
+  <script src="/index.js"></script>
 </body>
 
 </html>
