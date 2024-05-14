@@ -1,4 +1,4 @@
-//Navbar
+//Navbar -----------------------
 
 // 1 Changer le background color de la Navbar au scroll
 const navbar = document.querySelector('.navbar')
@@ -30,60 +30,47 @@ window.addEventListener('scroll', () => {
 
 // 2 Ouvrir la navbar mobil modal au clique sur le menu burger
 
-//Je stocke l'icone burger
-const icone:HTMLElement | null = document.querySelector('.container-faBurger');
-//la div Modal
-const modal:HTMLElement | null = document.querySelector('.mobil')
-//L'icnone croix
-const iconeXmark:HTMLElement | null = document.querySelector('.container-fa-xmark');
+// Sélection des éléments HTML
+const icone = document.querySelector('.container-faBurger') as HTMLElement;
+const modal = document.querySelector('.mobil') as HTMLElement;
+const iconeXmark = document.querySelector('.container-fa-xmark') as HTMLElement;
 
-if ( icone && (modal && iconeXmark)) {
-  // Lorsque vous cliquez sur 'burger', affichez 'modal'
-  icone.addEventListener('click', function(event) {
-    event.stopPropagation(); // Empêche l'événement de se propager au document
-  //  console.log('icone cliqué')
-    modal.classList.add('change-mobil');
-  });
+if (icone && modal && iconeXmark) {
+    // Lorsque vous cliquez sur 'burger', affichez 'modal'
+    icone.addEventListener('click', (event) => {
+        event.stopPropagation(); // Empêche l'événement de se propager au document
+        modal.classList.add('change-mobil');
+    });
 
-  // Lorsque vous cliquez sur iconeXmark, cachez modal
-  iconeXmark.addEventListener('click', function(event) {
-    event.stopPropagation(); // Empêche l'événement de se propager au document
-    modal.classList.remove('change-mobil');
-  });
-
-  // Lorsque vous cliquez en dehors de modal, cachez modal
-  document.addEventListener('click', function() {
-    modal.classList.remove('change-mobil');
-  });
-} else {
-  //console.log("La div 'modal' ou les boutons 'burger' ou 'croix' n'ont pas été trouvés.");
+    // Lorsque vous cliquez sur iconeXmark, cachez modal
+    iconeXmark.addEventListener('click', (event) => {
+        event.stopPropagation(); // Empêche l'événement de se propager au document
+        modal.classList.remove('change-mobil');
+    });
 }
 
-// Dans la section carousel 
+// Lorsque vous cliquez en dehors de modal, cachez modal
+if (modal) {
+    document.addEventListener('click', (event) => {
+        if (!modal.contains(event.target as Node)) {
+            modal.classList.remove('change-mobil');
+        }
+    });
+}
+    
+  
+// Section carousel  ------------------------------
 
-//1 => au clic sur un des chevrons passé à l'image suivantes
+//1 au clic sur les btn(id) next/next et prev/prev1 l'image change dans les 3 carousels 
 
 
-
-//1 au clic sur le btnNext et le btnPrevious l'image change
-
-
-
-// Je stocke les sources des svg dans des listes et les textes 
-// const carousel0: string[] = [
-//   ".text-container1",
-//   ".text-container2",
-//   ".text-container3",
-//   ".text-container4",
-// ];
+// Je stocke les sources des svg dans des listes 
 const carousel1: string[] = [
   "/assets/css/img/barbier-svg.svg",
   "/assets/css/img/manucure-svg.svg",
   "/assets/css/img/institut-svg.svg",
   "/assets/css/img/coiffeur-svg.svg",
 ];
-//console.log(carousel1);
-
 const carousel2: string[] = [
   "/assets/css/img/coiffeur-svg.svg",
   "/assets/css/img/barbier-svg.svg",
@@ -96,15 +83,15 @@ const carousel3: string[] = [
   "/assets/css/img/barbier-svg.svg",
   "/assets/css/img/coiffeur-svg.svg",
 ];
-//
-const carouselIds = ['carousel1', 'carousel2', 'carousel3'];
-// Initialisez un index pour chaque carrousel
+//Je stock mes 3 carousels dans un tableau
+const carouselIds = ['carousel0', 'carousel1', 'carousel2', 'carousel3', 'carousel4'];
 
+// Initialise un index pour chaque carrousel
 let carousel1Index = 0;
 let carousel2Index = 0;
 let carousel3Index = 0;
 
-// Écoutez le clic sur le bouton "Next" pour chaque carrousel
+// Écoutez le clic sur les boutons
 const nextButton = document.getElementById('next');
 const nextButton1 = document.getElementById('next1');
 //console.log(nextButton);
@@ -112,16 +99,7 @@ const prevButton = document.getElementById('prev');
 const prevButton1 = document.getElementById('prev1');
 //console.log(prevButton);
 
-
-// Supposons que votre bouton ait l'ID 'nextButton'
-
-if (nextButton)
-nextButton.addEventListener('click', function() {
-  const carouselTexts = document.getElementById('carousel4');
-  if(carouselTexts)
-  carouselTexts.setAttribute('data-bs-slide', 'next');
-});
-
+//Je créé une fonction au clic sur les bouton next/next1 et prev/prev1 qui incrémente de 1 a chaque clique le carouselIndex ou qui décrémente celui-ci.
 if (nextButton && prevButton) {
 
   nextButton.addEventListener('click', () => {
@@ -166,13 +144,11 @@ if (nextButton1 && prevButton1) {
     updateCarouselImage("carousel3", carousel3Index);
   });
 }
-// Fonction pour mettre à jour l'image d'un carrousel
 
-
-
+// Je créé un fonction pour mettre à jour les images, en modifiant la classe active au sein des carousels
 function updateCarouselImage(carouselIds:any , index:any) {
   const carouselItems = document.querySelectorAll(`#${carouselIds} .carousel-item--main`);
-  console.log(carouselItems);
+  //console.log(carouselItems);
   //console.log(index);
   carouselItems.forEach((item, i) => {
     if (i === index) {
@@ -183,16 +159,108 @@ function updateCarouselImage(carouselIds:any , index:any) {
   });
 }
 
-//2
+//2 Je créé une fonction pour modifier la classe active du carousel4
+
+// Stocker les éléments du carrousel dans un tableau
+const carouselTexts = Array.prototype.slice.call(document.querySelectorAll('.carousel-item--text'));
+//console.log(carouselTexts);
+const carousel0Texts = Array.prototype.slice.call(document.querySelectorAll('.carousel0-item--text'));
+//console.log(carousel0Texts);
+
+// Fonction pour passer à l'élément suivant du carousel3
+function nextItem() {
+    // Trouver l'élément actif
+    let activeItem = carouselTexts.find(item => item.classList.contains('active'));
+    if(activeItem){
+    // Enlever la classe 'active'
+    activeItem.classList.remove('active');
+    
+    // Trouver l'index de l'élément actif
+    let activeIndex = carouselTexts.indexOf(activeItem);
+    
+    // Si on est à la fin du tableau, retourner au début, sinon passer à l'élément suivant
+    if (activeIndex === carouselTexts.length - 1) {
+        carouselTexts[0].classList.add('active');
+    } else {
+        carouselTexts[activeIndex + 1].classList.add('active');
+    }
+}}
+
+// Fonction pour passer à l'élément précédent
+function prevItem() {
+    // Trouver l'élément actif
+    let activeItem = carouselTexts.find( item => item.classList.contains('active'));
+    if(activeItem) {
+    // Enlever la classe 'active'
+    activeItem.classList.remove('active');
+    
+    // Trouver l'index de l'élément actif
+    let activeIndex = carouselTexts.indexOf(activeItem);
+    
+    // Si on est au début du tableau, aller à la fin, sinon passer à l'élément précédent
+    if (activeIndex === 0) {
+        carouselTexts[carouselTexts.length - 1].classList.add('active');
+    } else {
+        carouselTexts[activeIndex - 1].classList.add('active');
+    }
+}}
+// Ajouter des écouteurs d'événements aux boutons
+if (nextButton && prevButton) {
+nextButton.addEventListener('click', nextItem);
+//console.log('bouton nextButton cliqué');
+prevButton.addEventListener('click', prevItem);
+}
+// Fonction pour passer à l'élément suivant du carousel0
+function nextItem1() {
+    // Trouver l'élément actif
+    let activeItem0 = carousel0Texts.find(item => item.classList.contains('active'));
+    if(activeItem0){
+    // Enlever la classe 'active'
+    activeItem0.classList.remove('active');
+    
+    // Trouver l'index de l'élément actif
+    let activeIndex0 = carousel0Texts.indexOf(activeItem0);
+    
+    // Si on est à la fin du tableau, retourner au début, sinon passer à l'élément suivant
+    if (activeIndex0 === carousel0Texts.length - 1) {
+        carousel0Texts[0].classList.add('active');
+    } else {
+        carousel0Texts[activeIndex0 + 1].classList.add('active');
+    }
+}}
+
+// Fonction pour passer à l'élément précédent
+function prevItem1() {
+    // Trouver l'élément actif
+    let activeItem0 = carousel0Texts.find( item => item.classList.contains('active'));
+    if(activeItem0) {
+    // Enlever la classe 'active'
+    activeItem0.classList.remove('active');
+    
+    // Trouver l'index de l'élément actif
+    let activeIndex0 = carousel0Texts.indexOf(activeItem0);
+    
+    // Si on est au début du tableau, aller à la fin, sinon passer à l'élément précédent
+    if (activeIndex0 === 0) {
+        carousel0Texts[carousel0Texts.length - 1].classList.add('active');
+    } else {
+        carousel0Texts[activeIndex0 - 1].classList.add('active');
+    }
+}}
+// Ajouter des écouteurs d'événements aux boutons
+if (nextButton1 && prevButton1) {
+nextButton1.addEventListener('click', nextItem1);
+//console.log('bouton nextButton cliqué');
+prevButton1.addEventListener('click', prevItem1);
+}
 
 
 //3 au clic sur 'voir plus' afficher une div avec le text 
-
-
-const textItem = document.querySelectorAll('.text-container');
+const textItem = document.querySelectorAll('.text-container2');
 //console.log(textItem);
 
 
+//Je créé une fonction au clic sur le bouton voir plus une classe est ajouter ou enlever pour laisser apparaître le contenu
 textItem.forEach((item) => {
     const SeeMore = item.querySelector('.btn-VoirPlus');
     if (SeeMore) {
@@ -204,4 +272,55 @@ textItem.forEach((item) => {
 
 
 
+//section promotion
 
+//Je créé une fonction pour qu'au clic sur le bouton next2 et le bouton prev2 le carousel change de slide
+
+const carousel2Texts = Array.prototype.slice.call(document.querySelectorAll('.carousel6-item--text'));
+console.log(carousel2Texts);
+
+const nextButton2 = document.getElementById('next2');
+const prevButton2 = document.getElementById('prev2');
+
+function nextItem2() {
+  // Trouver l'élément actif
+  let activeItem2 = carousel2Texts.find(item => item.classList.contains('active'));
+  if(activeItem2){
+  // Enlever la classe 'active'
+  activeItem2.classList.remove('active');
+  
+  // Trouver l'index de l'élément actif
+  let activeIndex2 = carousel2Texts.indexOf(activeItem2);
+  
+  // Si on est à la fin du tableau, retourner au début, sinon passer à l'élément suivant
+  if (activeIndex2 === carousel2Texts.length - 1) {
+      carousel2Texts[0].classList.add('active');
+  } else {
+      carousel2Texts[activeIndex2 + 1].classList.add('active');
+  }
+}}
+
+// Fonction pour passer à l'élément précédent
+function prevItem2() {
+  // Trouver l'élément actif
+  let activeItem2 = carousel2Texts.find( item => item.classList.contains('active'));
+  if(activeItem2) {
+  // Enlever la classe 'active'
+  activeItem2.classList.remove('active');
+  
+  // Trouver l'index de l'élément actif
+  let activeIndex2 = carousel2Texts.indexOf(activeItem2);
+  
+  // Si on est au début du tableau, aller à la fin, sinon passer à l'élément précédent
+  if (activeIndex2 === 0) {
+      carousel2Texts[carousel2Texts.length - 1].classList.add('active');
+  } else {
+      carousel2Texts[activeIndex2 - 1].classList.add('active');
+  }
+}}
+// Ajouter des écouteurs d'événements aux boutons
+if (nextButton2 && prevButton2) {
+nextButton2.addEventListener('click', nextItem2);
+//console.log('bouton nextButton cliqué');
+prevButton2.addEventListener('click', prevItem2);
+}

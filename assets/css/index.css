@@ -148,12 +148,13 @@ hr {
 .carousel-text {
   display: none;
 }
+
 .text-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.9s ease;
 }
-.text-container.text-change .text-content {
+.text-container2.text-change .text-content {
   max-height: 250px;
   transition: max-height 0.9s ease;
 }
