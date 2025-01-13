@@ -79,7 +79,7 @@ const carousel3: string[] = [
   "/assets/css/img/coiffeur-svg.svg",
 ];
 //Je stock mes 3 carousels dans un tableau
-const carouselIds = [
+const carouselIds: string[] = [
   "carousel0",
   "carousel1",
   "carousel2",
